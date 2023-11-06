@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #4CAF50, #2196F3);
+    color: rgb(213, 45, 45);
+  }
+  
+  .container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    text-align: center;
+    row-gap: 50px;
+  }
+  
+  .jumbotron {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  .btn-primary,
+  .btn-success,
+  .btn-info,
+  .btn-warning,
+  .btn-danger {
+    margin-top: 10px;
+  }
+  
+  .well {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  /* Responsive animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .container {
+    animation: fadeIn 1s ease-in-out;
+  }
+  

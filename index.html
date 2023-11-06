@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Issue Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Issue Tracker</h1>
+    <div class="jumbotron">
+      <h3>Add New Issue:</h3>
+      <!-- Issue form -->
+      <form id="issueInputForm">
+        <div class="form-group">
+          <label for="issueDescription">Description</label>
+          <input type="text" class="form-control" id="issueDescription" placeholder="Describe the issue ...">
+        </div>
+        <div class="form-group">
+          <label for="issueSeverity">Severity</label>
+          <select id="issueSeverity" class="form-control">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="issueAssignedTo">Assigned To</label>
+          <input type="text" class="form-control" id="issueAssignedTo" placeholder="Enter responsible ...">
+        </div>
+        <div class="form-group">
+          <label for="issueFiles">Attach File</label>
+          <input type="file" class="form-control" id="issueFiles">
+        </div>
+        <button id="add-issue" onclick="submitIssue(event)" class="btn btn-primary">Add</button>
+      </form>
+    </div>
+    <div class="col-lg-12">
+      <div id="issuesList">
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals for notifications -->
+  <div class="modal fade" id="emptyField" tabindex="-1" role="dialog" aria-labelledby="emptyFieldLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Modal content for empty field notification -->
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="fileUploadSuccess" tabindex="-1" role="dialog" aria-labelledby="fileUploadSuccessLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Modal content for file upload success notification -->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha384-KtLElr8fFZn8XYkpJ+llJ/cPRvz8Kl2f4Jk/x6v8f+V4BkZFCg3JwxqF5LO8Sljp"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
